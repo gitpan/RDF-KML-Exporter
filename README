@@ -1,0 +1,57 @@
+NAME
+    RDF::KML::Exporter - export RDF geo data to KML (Google Earth)
+
+SYNOPSIS
+     use RDF::KML::Exporter;
+ 
+     my $exporter = RDF::KML::Exporter->new;
+     my $input    = 'http://dbpedia.org/resource/London';
+ 
+     print $exporter->export_kml($input)->render;
+
+DESCRIPTION
+    This module reads RDF and writes Atom feeds. It does the reverse of
+    XML::Atom::OWL.
+
+  Constructor
+    *   "new(%options)"
+
+        Returns a new RDF::KML::Exporter object.
+
+        There are no valid options at the moment - the hash is reserved for
+        future use.
+
+  Methods
+    *   "export_kml($input, %options)"
+
+        Returns a KML document including all the locations in the input, in
+        no particular order.
+
+        The input may be a URI, file name, RDF::Trine::Model or anything
+        else that can be handled by the "rdf_parse" method of
+        RDF::TrineShortcuts.
+
+        The returned object is an Geo::GoogleEarth::Pluggable instance,
+        which can be output as XML using its "render" method.
+
+  RDF Input
+    Input is expected to use the W3C's WGS84 Geo Positioning vocabulary
+    <http://www.w3.org/2003/01/geo/wgs84_pos#>. Place names should use
+    rdfs:label.
+
+SEE ALSO
+    HTML::Microformats, RDF::TrineShortcuts, Geo::GoogleEarth::Pluggable.
+
+    <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+
+    <http://www.perlrdf.org/>.
+
+AUTHOR
+    Toby Inkster <tobyink@cpan.org>.
+
+COPYRIGHT
+    Copyright 2011 Toby Inkster
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
