@@ -5,14 +5,11 @@ SYNOPSIS
      use RDF::KML::Exporter;
  
      my $exporter = RDF::KML::Exporter->new;
-     my $input    = 'http://dbpedia.org/resource/London';
+     my $input    = 'http://dbpedia.org/resource/Lewes';
  
      print $exporter->export_kml($input)->render;
 
 DESCRIPTION
-    This module reads RDF and writes Atom feeds. It does the reverse of
-    XML::Atom::OWL.
-
   Constructor
     *   "new(%options)"
 

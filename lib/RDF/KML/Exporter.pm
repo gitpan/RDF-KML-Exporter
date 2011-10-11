@@ -1,6 +1,6 @@
 package RDF::KML::Exporter;
 
-use 5.008;
+use 5.010;
 use common::sense;
 
 use Geo::GoogleEarth::Pluggable;
@@ -12,7 +12,7 @@ sub RDFS { return 'http://www.w3.org/2000/01/rdf-schema#' . shift; }
 
 use namespace::clean;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 sub new
 {
@@ -78,7 +78,6 @@ sub export_kml
 
 1;
 
-
 __END__
 
 =head1 NAME
@@ -90,14 +89,11 @@ RDF::KML::Exporter - export RDF geo data to KML (Google Earth)
  use RDF::KML::Exporter;
  
  my $exporter = RDF::KML::Exporter->new;
- my $input    = 'http://dbpedia.org/resource/London';
+ my $input    = 'http://dbpedia.org/resource/Lewes';
  
  print $exporter->export_kml($input)->render;
 
 =head1 DESCRIPTION
-
-This module reads RDF and writes Atom feeds. It does the reverse
-of L<XML::Atom::OWL>.
 
 =head2 Constructor
 

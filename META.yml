@@ -4,40 +4,44 @@ author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
-  Module::Signature: 0.66
   Test::More: 0.61
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 1.00'
+generated_by: 'Module::Install version 1.02'
 keywords:
-  - geo
-  - wgs84
-  - rdf
-  - semantic
-  - web
-  - googleearth
-  - kml
-  - xml
+  - Geo
+  - Geographic
+  - Geography
+  - 'Google Earth'
+  - KML
+  - RDF
+  - 'Semantic Web'
+  - WGS84
+  - XML
   - convert
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
+module_name: RDF::KML::Exporter
 name: RDF-KML-Exporter
 no_index:
   directory:
+    - examples
     - inc
     - t
+    - xt
 requires:
   Geo::GoogleEarth::Pluggable: 0
   RDF::TrineShortcuts: 0.100
   Scalar::Util: 0
   common::sense: 0
-  perl: 5.8.0
+  namespace::clean: 0
+  perl: 5.10.0
 resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=RDF-KML-Exporter
-  homepage: http://search.cpan.org/dist/RDF-KML-Exporter/
+  homepage: https://metacpan.org/release/RDF-KML-Exporter
   license: http://dev.perl.org/licenses/
-  repository: http://goddamn.co.uk/viewvc/perlmods/RDF-KML-Exporter/
-version: 0.001
+  repository: http://goddamn.co.uk/svn-web/perlmods/browse/RDF-KML-Exporter/
+version: 0.002
