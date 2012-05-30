@@ -8,9 +8,9 @@
 	:readme_from _:main ;
 	:test_requires "Test::More 0.61" ;
 	:requires "Geo::GoogleEarth::Pluggable" ;
-	:requires "RDF::TrineShortcuts 0.100" ;
+	:requires "RDF::TrineX::Functions" ;
 	:requires "Scalar::Util" ;
 	:requires "namespace::clean" ;
-	:requires "common::sense" .
+	:requires "PerlX::Maybe" .
 
 _:main <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> "lib/RDF/KML/Exporter.pm" .
